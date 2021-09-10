@@ -12,13 +12,13 @@ func main() {
 
 	arg := os.Args
 
-	current_dir, err1 := os.Getwd()
-	if err1 != nil {
+	current_dir, err_dir := os.Getwd()
+	if err_dir != nil {
 		fmt.Println("error getting current dir")
 	}
 
-	city_list, err2 := os.Open(current_dir + "/german-cities.txt")
-	if err2 != nil {
+	city_list, err_list := os.Open(current_dir + "/german-cities.txt")
+	if err_list != nil {
 		fmt.Println("error loading city-list")
 	}
 
